@@ -65,15 +65,7 @@
                     {{/if}}
                     {{#if @site.secondary_navigation}}
                         <!-- secondary navigation -->
-                        <ul class="icons">
-                            {{#foreach navigation}}
-                                <li>
-                                    <a href="{{url}}" class="icon fa-{{slug}}" title="{{slug}}">
-                                        <span class="label">{{slug}}</span>
-                                    </a>
-                                </li>
-                            {{/foreach}}
-                        </ul>
+                        {{navigation type="secondary"}}
                     {{else}}
                         <ul class="icons">
                             {{#if @site.twitter}}

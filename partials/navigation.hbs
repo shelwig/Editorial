@@ -1,3 +1,15 @@
+{{#if isSecondary}}
+    <!-- secondary navigation -->
+    <ul class="icons">
+        {{#foreach navigation}}
+            <li>
+                <a href="{{url}}" class="icon fa-{{slug}}" title="{{slug}}">
+                    <span class="label">{{slug}}</span>
+                </a>
+            </li>
+        {{/foreach}}
+    </ul>
+{{else}}
 <nav id="menu">
     <header class="major">
         <h2>Menu</h2>
@@ -8,3 +20,4 @@
         {{/foreach}}
     </ul>
 </nav>
+{{/if}}
