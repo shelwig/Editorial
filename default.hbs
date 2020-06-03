@@ -64,7 +64,16 @@
                         <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
                     {{/if}}
                     {{#if @site.secondary_navigation}}
-                        {{navigation type="secondary"}}
+                        <!-- secondary navigation -->
+                        <ul class="icons">
+                            {{#foreach navigation}}
+                                <li>
+                                    <a href="{{url}}" class="icon fa-{{slug}}" title="{{slug}}">
+                                        <span class="label">{{slug}}</span>
+                                    </a>
+                                </li>
+                            {{/foreach}}
+                        </ul>
                     {{else}}
                         <ul class="icons">
                             {{#if @site.twitter}}
