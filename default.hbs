@@ -63,6 +63,20 @@
                     {{else}}
                         <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
                     {{/if}}
+                    {{#if isSecondary}}
+                    <!-- secondary navigation -->
+                        <ul class="icons">
+                            {{#foreach navigation}}
+                                <li class="nav-{{slug}}">
+                                    <a href="{{url}}" class="social-link">
+                                        <svg width="16" height="16" role="img" aria-label="{{slug}} icon">
+                                            <use xlink:href="#{{slug}}"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            {{/foreach}}
+                        </ul>
+                    {{/if}}
                     {{#if @site.secondary_navigation}}
                         {{navigation type="secondary"}}
                     {{else}}
